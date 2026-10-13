@@ -1,13 +1,16 @@
 "use client";
 
-import type { Dict } from "@/lib/dict";
+import { dict } from "@/lib/dict";
 import { site } from "@/lib/config";
 import { generalMsg, waLink } from "@/lib/whatsapp";
 import WhatsAppIcon from "./WhatsAppIcon";
 import Wordmark from "./Wordmark";
 
+// Infer type directly from the dict export
+type Dict = typeof dict.en;
+
 type Props = {
-  d?: Partial<Dict> | Record<string, string>;
+  d?: Dict | Record<string, string>;
 };
 
 const FacebookIcon = () => (
