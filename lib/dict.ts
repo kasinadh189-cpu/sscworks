@@ -24,7 +24,7 @@ export const dict: Record<Locale, Dict> = {
     deliveryTitle: "We deliver across Kerala", deliverySub: "From Thiruvananthapuram to Kasaragod. Choose your district.",
     deliveryPage: "Sofa delivery in",
     footerNote: "Prices are shared on WhatsApp, matched to your size and fabric.",
-    fSeating: "Seating", fStyle: "Style", fFabric: "Fabric", clear: "Clear filters", showMore: "Show more",
+    fSeating: "Seating", fStyle: "Style", fFabric: "Fabric", clear: "Clear", showMore: "Show more",
     results: "sofas", noResults: "No sofas match these filters.",
     badgeBestseller: "Bestseller", badgeNew: "New", mto: "Made to order",
     colours: "Colours", features: "Key features", description: "About this sofa", size: "Size",
