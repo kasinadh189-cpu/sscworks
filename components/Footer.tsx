@@ -1,9 +1,14 @@
 "use client";
 
+import type { Dict } from "@/lib/dict";
 import { site } from "@/lib/config";
 import { generalMsg, waLink } from "@/lib/whatsapp";
 import WhatsAppIcon from "./WhatsAppIcon";
 import Wordmark from "./Wordmark";
+
+type Props = {
+  d?: Partial<Dict> | Record<string, string>;
+};
 
 const FacebookIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6 shrink-0" aria-hidden>
@@ -19,11 +24,13 @@ const InstagramIcon = () => (
   </svg>
 );
 
-// Transparent glass button with the same white wave as the hero
 function SocialButton({ href, label, sub, icon }: { href: string; label: string; sub: string; icon: React.ReactNode }) {
   return (
     <a
-      href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
       className="group relative flex min-h-[64px] w-full items-center overflow-hidden rounded-none border border-ivory/25 bg-ivory/5 px-5 text-ivory backdrop-blur-md transition-all duration-500 ease-out hover:border-ivory hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] active:scale-[0.98] sm:hover:scale-[1.02]"
     >
       <span className="absolute inset-0 translate-y-full rounded-none bg-gradient-to-r from-ivory via-white to-ivory transition-transform duration-500 ease-out group-hover:translate-y-0" />
@@ -38,19 +45,17 @@ function SocialButton({ href, label, sub, icon }: { href: string; label: string;
   );
 }
 
-export default function Footer() {
+export default function Footer({ d }: Props) {
   const t = { chat: "Chat with us", follow: "Follow us", like: "Like our page" };
 
   return (
     <footer className="mt-24 overflow-x-clip border-t border-ivory/10 sm:mt-32">
-      {/* Socials only */}
       <div className="mx-auto grid max-w-6xl gap-2.5 px-4 pt-10 sm:grid-cols-3 sm:gap-3 sm:px-8 sm:pt-14">
         <SocialButton href={waLink(generalMsg())} label="WhatsApp" sub={t.chat} icon={<WhatsAppIcon className="h-6 w-6 shrink-0" />} />
         {site.instagram && <SocialButton href={site.instagram} label="Instagram" sub={t.follow} icon={<InstagramIcon />} />}
         {site.facebook && <SocialButton href={site.facebook} label="Facebook" sub={t.like} icon={<FacebookIcon />} />}
       </div>
 
-      {/* Giant wordmark: padded on the sides and top, flush with the bottom */}
       <div className="px-4 pb-0 pt-8 sm:px-8 sm:pt-12">
         <Wordmark text={site.wordmark} />
       </div>

@@ -10,12 +10,41 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
-const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-cormorant", display: "swap" });
-const anton = Anton({ subsets: ["latin"], weight: "400", variable: "--font-anton", display: "swap" });
-const interTight = Inter_Tight({ subsets: ["latin"], variable: "--font-inter-tight", display: "swap" });
-const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-cormorant",
+  display: "swap",
+  preload: true,
+});
 
-export const viewport: Viewport = { themeColor: "#060b16", width: "device-width", initialScale: 1 };
+const anton = Anton({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-anton",
+  display: "swap",
+  preload: true,
+});
+
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  variable: "--font-inter-tight",
+  display: "swap",
+  preload: true,
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap",
+  preload: true,
+});
+
+export const viewport: Viewport = {
+  themeColor: "#060b16",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = `${site.name} | Premium sofas in ${site.city}, delivered across Kerala`;
@@ -46,7 +75,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     url: site.url,
     telephone: `+${site.phone}`,
     areaServed: { "@type": "State", name: "Kerala" },
-    address: { "@type": "PostalAddress", addressLocality: site.city, addressRegion: "Kerala", addressCountry: "IN", streetAddress: site.address || undefined },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: site.city,
+      addressRegion: "Kerala",
+      addressCountry: "IN",
+      streetAddress: site.address || undefined,
+    },
   };
 
   return (
