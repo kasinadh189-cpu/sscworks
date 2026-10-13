@@ -40,8 +40,8 @@ export default function Header({ d, seating, featured, colours }: Props) {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 px-2 pt-2 sm:px-6 sm:pt-4">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-1.5 rounded-none border border-ivory/10 bg-ink/80 py-1 pl-3.5 pr-1 backdrop-blur-xl sm:py-1.5 sm:pl-6 sm:pr-1.5">
+      <header className="fixed inset-x-0 top-0 z-50 w-full overflow-x-hidden px-3 pt-2 sm:px-6 sm:pt-4">
+        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-1.5 rounded-none border border-ivory/10 bg-ink/85 py-1 pl-3.5 pr-1 backdrop-blur-xl sm:py-1.5 sm:pl-6 sm:pr-1.5">
           <Link href="/" className="font-display truncate text-lg tracking-wide text-ivory focus:outline-none sm:text-2xl" aria-label={site.name}>
             {site.name}
           </Link>
