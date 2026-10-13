@@ -32,8 +32,8 @@ export const toCard = (p: Product): CardData => ({
   image: p.images?.[0],
   imageHover: p.images?.[1] ?? p.images?.[0],
   images: p.images,
-  material: p.material ?? p.upholstery?.[0],
-  color: p.color,
+  material: (p as { material?: string | L }).material ?? p.upholstery?.[0],
+  color: (p as { color?: string | L }).color,
   badge: p.badge,
 });
 
