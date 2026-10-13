@@ -68,7 +68,7 @@ export default function VisitUsSection() {
                 {/* Offset to 102% prevents sub-pixel white bleed before hover */}
                 <span className="absolute inset-0 translate-y-[102%] bg-ivory transition-transform duration-500 ease-out group-hover:translate-y-0" />
                 <span className="font-[family-name:var(--font-anton)] relative z-10 text-xl uppercase tracking-wider transition-colors duration-300 group-hover:text-ink sm:text-2xl">
-                  OPEN IN GOOGLE MAPS →
+                  GOOGLE MAPS →
                 </span>
               </Link>
             </div>
