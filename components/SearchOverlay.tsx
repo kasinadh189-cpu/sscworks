@@ -133,10 +133,10 @@ export default function SearchOverlay({ d }: { d: Record<string, string> }) {
   );
 
   return (
-    <div className="mx-auto max-w-6xl px-4 pb-16 pt-24 sm:px-8 sm:pt-28">
+    <div className="mx-auto max-w-6xl px-4 pb-16 pt-14 sm:px-8 sm:pt-16">
       <div
         ref={boxRef}
-        className="sticky top-[66px] z-30 rounded-none border border-ivory/10 bg-ink/90 p-2.5 backdrop-blur-xl sm:top-[88px] sm:p-3"
+        className="sticky top-[56px] z-30 rounded-none border border-ivory/10 bg-ink/90 p-2.5 backdrop-blur-xl sm:top-[72px] sm:p-3"
       >
         <div className="flex flex-col gap-2.5">
           {/* Top Row: Search Input + Filter Drawer Toggle */}

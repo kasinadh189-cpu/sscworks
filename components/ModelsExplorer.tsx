@@ -137,11 +137,11 @@ export default function ModelsExplorer({
   );
 
   return (
-    <section className="mx-auto max-w-6xl px-4 pb-10 pt-24 sm:px-8 sm:pt-28">
+    <section className="mx-auto max-w-6xl px-4 pb-10 pt-14 sm:px-8 sm:pt-16">
       {/* Sticky Search & Filter Container */}
       <div
         ref={box}
-        className="sticky top-[66px] z-30 -mx-3 rounded-none border border-ivory/10 bg-ink/90 p-2.5 backdrop-blur-xl sm:top-[88px] sm:mx-0 sm:p-3"
+        className="sticky top-[56px] z-30 -mx-3 rounded-none border border-ivory/10 bg-ink/90 p-2.5 backdrop-blur-xl sm:top-[72px] sm:mx-0 sm:p-3"
       >
         <div className="flex flex-col gap-2.5">
           {/* Search Input & Filter Toggle Trigger */}
